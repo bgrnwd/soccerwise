@@ -1,4 +1,4 @@
-name: ⚽ Update Golden Boot Standings
+name: ⚽ Update Data
 on:
   schedule:
     - cron: 0 8 * MAR-OCT MON
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x
@@ -26,7 +26,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           commit-message: |
-            data: update standings
-          branch: update-standings
-          title: Update standings
+            data: update
+          branch: auto-update
+          title: Update data
           reviewers: bgrnwd

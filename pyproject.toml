@@ -13,10 +13,11 @@ keywords = [
 classifiers = [
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
   "streamlit",
@@ -24,7 +25,7 @@ dependencies = [
   "polars",
   "great_tables"
 ]
-version = "0.0.1"
+version = "0.1.0"
 
 [project.urls]
 Repository = "https://github.com/bgrnwd/goldenbootdraft.tracker"

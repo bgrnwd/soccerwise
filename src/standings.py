@@ -99,7 +99,7 @@ standings_html = (
     .as_raw_html()
 )
 
-st.title("Soccerwise Golden Boot Tracker 📈")
+st.title(body="2025 Golden Boot 👟", text_alignment="center")
 
 st.html(standings_html)
 

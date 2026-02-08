@@ -2,18 +2,18 @@ import streamlit as st
 
 st.title("About")
 st.header("History")
-st.markdown("""The [ExtraTime Radio podcast](https://www.mlssoccer.com/video/topics/extratime/) (RIP :headstone:) held the first Golden Boot Draft in 2021.
+st.markdown("""The [ExtraTime Radio podcast](https://www.mlssoccer.com/video/topics/extratime/) (RIP 🪦) held the first Golden Boot Draft in 2021.
 [Andrew Wiebe](https://bsky.app/profile/andrew-wiebe.bsky.social), [Calen Carr](https://www.calencarr.com/mystory), [David Gass](https://bsky.app/profile/empiregass.bsky.social), and [Matt Doyle](https://bsky.app/profile/mattdoyle.bsky.social) took part in the inaugural draft by selecting 2 players each.
 In 2022, the team size was increased to 4 players. In 2023, [Tom Bogert](https://bsky.app/profile/tombogert.bsky.social) replaced Calen and each team was allowed to keep one player from the previous year.
 In 2025, Producer Anders and [Morgan](https://bsky.app/profile/morgantencza.bsky.social) (Admin) joined in on the fun.
 """)
 st.subheader("Past winners")
 st.markdown("""
-- **2025**: Andrew Wiebe (126 goals) :trophy:
-- **2024**: Tom Bogert :trophy:
-- **2023**: Tom Bogert :trophy:
-- **2022**: Andrew Wiebe (120 goals) :trophy:
-- **2021**: Matt Doyle (23 goals) :trophy:
+- **2025**: Andrew Wiebe (126 goals) 🏆
+- **2024**: Tom Bogert 🏆
+- **2023**: Tom Bogert 🏆
+- **2022**: Andrew Wiebe (120 goals) 🏆
+- **2021**: Matt Doyle (23 goals) 🏆
 """)
 st.header("Rules")
 st.subheader("2026 Rules")

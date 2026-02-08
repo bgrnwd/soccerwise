@@ -9,4 +9,4 @@ textColor="#31333F"
 font="sans serif"
 
 [server]
-runOnSave = false
+runOnSave = true
