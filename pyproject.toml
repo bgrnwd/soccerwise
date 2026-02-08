@@ -3,7 +3,7 @@ name = "goldenbootdraft.tracker"
 description = "Tracking the annual Soccerwise Golden Boot competition"
 readme = "README.md"
 license = { text = "MIT" }
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [
   { name = "Brian Greenwood" },
 ]
@@ -17,10 +17,9 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
-  "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
-  "streamlit",
+  "streamlit>=1.52.0",
   "itscalledsoccer",
   "polars",
   "great_tables"
