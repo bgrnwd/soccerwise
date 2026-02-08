@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="🦉",
 )
 
-tracker = st.Page(
+golden_boot = st.Page(
     "standings.py",
     title="Golden Boot",
     icon="👟",
@@ -14,5 +14,5 @@ tracker = st.Page(
 about = st.Page("about.py", title="About the Golden Boot", icon="ℹ️")
 over_under = st.Page("over_under.py", title="Over/Under", icon="📈")
 
-pg = st.navigation([tracker, about, over_under])
+pg = st.navigation([golden_boot, over_under,about])
 pg.run()
