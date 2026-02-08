@@ -2,16 +2,17 @@ import streamlit as st
 
 st.set_page_config(
     layout="wide",
-    page_title="Soccerwise Golden Boot Tracker",
+    page_title="Soccerwise Tracker",
     page_icon="🦉",
 )
 
 tracker = st.Page(
     "standings.py",
-    title="Standings",
-    icon="📊",
+    title="Golden Boot",
+    icon="👟",
 )
-about = st.Page("about.py", title="About", icon="ℹ️")
+about = st.Page("about.py", title="About the Golden Boot", icon="ℹ️")
+over_under = st.Page("over_under.py", title="Over/Under", icon="📈")
 
-pg = st.navigation([tracker, about])
+pg = st.navigation([tracker, about, over_under])
 pg.run()

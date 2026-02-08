@@ -1,3 +1,4 @@
-# goldenbootdraft.tracker
+<!-- omit in toc -->
+# Soccerwise :owl: Tracker
 
-Tracking the ETR/Soccerwise annual MLS Golden Boot draft
+Tracking the annual Soccerwise MLS Golden Boot Draft and Over/Under predictions.
