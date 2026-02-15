@@ -14,5 +14,5 @@ golden_boot = st.Page(
 about = st.Page("about.py", title="About the Golden Boot", icon="ℹ️")
 over_under = st.Page("over_under.py", title="Over/Under", icon="📈")
 
-pg = st.navigation([golden_boot, over_under,about])
+pg = st.navigation([golden_boot, over_under, about])
 pg.run()

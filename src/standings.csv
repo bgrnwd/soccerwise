@@ -1,67 +1,122 @@
-player_id,club_logo,player_name,team,goals,xgoals,assists
-vzqowm7qap,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Lionel Messi,Wiebe,29,24.0837,16
-BLMvzyGjMx,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/KAqBN0Vqbg.png,Emmannuel Latte Lath,Wiebe,7,10.9273,0
-Xj5Y68Olqb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Daniel Gazdag,Wiebe,6,10.6342,5
-kRQaovVo5K,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,Gabriel Pec,Wiebe,7,10.62,3
-gjMNRerBMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZBOzQKw.png,Chucky Lozano,Wiebe,9,11.2598,8
-Oa5wVYvWM1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/YgOMngl5wN.png,Ezequiel Ponce,Wiebe,10,13.5886,0
-aDQ0PnvBQE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/pzeQZ6xQKw.png,Djordje Mihalovic,Wiebe,13,11.797,7
-9vQ22BR7QK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,Jesus Ferreira,Wiebe,4,6.1911,3
-KPqj71NyQ6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Sam Surridge,Wiebe,24,26.7523,3
-Oa5wV17gM1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ8EW5GR.png,Martin Ojeda,Wiebe,16,12.8601,9
-e7Mz913GQr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,Aaron Long,Wiebe,1,0.5741,0
-odMXRxV2qY,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,Denis Bouanga,Doyle,24,23.6348,7
-zeQZKbYMKw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Luis Suarez,Doyle,10,13.8336,9
-Oa5w0Kv4q1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NPqxKXZ59d.png,Patrick Agyemang,Doyle,6,6.0257,0
-Pk5Lggy7MO,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/gpMOLwl5zy.png,Myrto Uzuni,Doyle,6,9.457699999999999,3
-gOMn6n8XMw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,Christian Ramirez,Doyle,4,5.2137,1
-KXMekX42q6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/Z2vQ1xlqrA.png,Dejan Joveljic,Doyle,18,14.1963,2
-eVq3yp76MW,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/Vj58weDM8n.png,Alonso Martinez,Doyle,17,22.109,1
-9z5ka8adQA,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,Ryan Gauld,Doyle,1,0.7197,1
-eV5DB6nQKn,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Choupo-Moting,Doyle,17,13.8891,3
-KPqj7K72Q6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Cedric Teuchert,Doyle,3,3.7635,1
-kRQabvYbMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Walker Zimmerman,Doyle,0,2.3735,1
-315VPR6vQ9,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mKAqBBmqbg.png,Petar Musa,Gass,18,14.668,6
-KAqBNdyZqb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQand1MKZ.png,Kelvin Yaboah,Gass,9,12.8853,0
-p6qbOeRXQ0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,Jordan Morris,Gass,5,4.8725000000000005,1
-wvq9go6aMW,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mvzqoLZQap.png,Diego Rossi,Gass,16,12.4202,3
-Oa5wY8RXQ1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Hany Mukhtar,Gass,16,16.9119,8
-KAqBNEpWqb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/19vQ2095K6.png,Leo Campana,Gass,7,8.1432,0
-4wM46RpqjB,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Emil Forsberg,Gass,11,9.532399999999999,7
-gjMN614vMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ8EW5GR.png,Ramiro Enrique,Gass,8,7.3135,0
-a35ry7P2ML,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Joao Klauss,Gass,10,12.0102,2
-EGMPlOjkMa,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/WBLMvYAQxe.png,Felipe Mora,Gass,5,8.7342,2
-gjMNvrO4MK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mvzqoLZQap.png,Steven Moreira,Gass,1,1.1567,2
-gjMNrbKMKp,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/EKXMeX3Q64.png,Christian Benteke,Tom/Calen,9,14.3207,3
-kRQa2AvjMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,Evander,Tom/Calen,18,8.4368,13
-raMyAywlMd,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/KAqBN0Vqbg.png,Miguel Almiron,Tom/Calen,6,10.3812,4
-ljqE2VkOQx,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mKAqBBmqbg.png,Lucho Acosta,Tom/Calen,5,5.3308,1
-9z5k7rej5A,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/gpMOLwl5zy.png,Brandon Vazquez,Tom/Calen,5,9.8684,0
-KAqBxEWMbg,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NPqxKXZ59d.png,Wilfred Zaha,Tom/Calen,10,8.1682,5
-gOMnRE8BMw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Marcel Hartel,Tom/Calen,9,7.7701,4
-aDQ0PJpPQE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Tai Baribo,Tom/Calen,16,13.899000000000001,2
-xW5pxANJ5g,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZBOzQKw.png,Marcus Ingvartsen,Tom/Calen,2,2.0633,1
-gOMn6oPAMw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQabn8MKZ.png,Federico Bernardeschi,Tom/Calen,4,4.4616,3
-jYQJzWGyQG,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,Miles Robinson,Tom/Calen,1,1.7322000000000002,0
-vzqo7zWLqa,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/X0Oq66zq6D.png,Hugo Cuypers,Producer Anders,17,22.0906,2
-raMyAWZAMd,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,Kevin Denkey,Producer Anders,15,13.803,1
-Xj5Y8R7AMb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/0KPqjA456v.png,Chicho Arango,Producer Anders,13,15.9574,3
-eVq3v9n5WO,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,Olivier Giroud,Producer Anders,3,4.5082,1
-eVq3jolG5W,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/WBLMvYAQxe.png,Jonathan Rodriguez,Producer Anders,0,0.0,0
-NWMWlWle5l,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,Brian White,Producer Anders,16,15.4885,1
-OlMleWzR5L,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/pzeQZ6xQKw.png,Rafa Navarro,Producer Anders,12,16.8107,3
-p6qbOn3DQ0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/X0Oq66zq6D.png,Jonathan Bamba,Producer Anders,5,6.3782,3
-XVqKG1XWq0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Simon Becher,Producer Anders,3,8.7212,1
-2vQ1N6yLMr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/APk5LGOMOW.png,Giacomo Vrioni,Producer Anders,3,4.0497,0
-4wM4JGblqj,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Sean Nealis,Producer Anders,0,0.47090000000000004,0
-7vQ7J8JYqD,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,Joseph Paintsil,Admin,10,10.1539,2
-e7Mz9GBOQr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Mikael Uhre,Admin,6,5.7278,6
-BLMv1GlQxe,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,Albert Rusnak,Admin,11,8.6453,7
-2lqRR4Rxqr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Lewis Morgan,Admin,0,0.5202,0
-7VqG0ZGYQv,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqR4JMr0.png,Diego Luna,Admin,9,7.7109000000000005,3
-gOMnl3y6qw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQand1MKZ.png,Sang Bin Jeong,Admin,1,2.1933,1
-vzqorrRk5a,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/19vQ2095K6.png,Carlos Gil,Admin,10,7.5532,9
-N6Mm76gZqE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/0KPqjA456v.png,Josef Martinez,Admin,14,13.6134,2
-jYQJaDnDqG,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Leo Afonso,Admin,0,0.36250000000000004,0
-,,Antoine Griezmann,Admin,0,0.0,0
-eV5DL18a5K,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Jakob Glesnes,Admin,1,0.8948,0
+player_id,club_logo,player_name,team,goals,xgoals,assists,year
+vzqowm7qap,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Lionel Messi,Wiebe,29,24.0837,16,2025
+BLMvzyGjMx,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/KAqBN0Vqbg.png,Emmannuel Latte Lath,Wiebe,7,10.9273,0,2025
+Xj5Y68Olqb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Daniel Gazdag,Wiebe,6,10.6342,5,2025
+kRQaovVo5K,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,Gabriel Pec,Wiebe,7,10.62,3,2025
+gjMNRerBMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZBOzQKw.png,Chucky Lozano,Wiebe,9,11.2598,8,2025
+Oa5wVYvWM1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/YgOMngl5wN.png,Ezequiel Ponce,Wiebe,10,13.5886,0,2025
+aDQ0PnvBQE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/pzeQZ6xQKw.png,Djordje Mihalovic,Wiebe,13,11.797,7,2025
+9vQ22BR7QK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,Jesus Ferreira,Wiebe,4,6.1911,3,2025
+KPqj71NyQ6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Sam Surridge,Wiebe,24,26.7523,3,2025
+Oa5wV17gM1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ8EW5GR.png,Martin Ojeda,Wiebe,16,12.8601,9,2025
+e7Mz913GQr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,Aaron Long,Wiebe,1,0.5741,0,2025
+odMXRxV2qY,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,Denis Bouanga,Doyle,24,23.6348,7,2025
+zeQZKbYMKw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Luis Suarez,Doyle,10,13.8336,9,2025
+Oa5w0Kv4q1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NPqxKXZ59d.png,Patrick Agyemang,Doyle,6,6.0257,0,2025
+Pk5Lggy7MO,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/gpMOLwl5zy.png,Myrto Uzuni,Doyle,6,9.457699999999999,3,2025
+gOMn6n8XMw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,Christian Ramirez,Doyle,4,5.2137,1,2025
+KXMekX42q6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/Z2vQ1xlqrA.png,Dejan Joveljic,Doyle,18,14.1963,2,2025
+eVq3yp76MW,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/Vj58weDM8n.png,Alonso Martinez,Doyle,17,22.109,1,2025
+9z5ka8adQA,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,Ryan Gauld,Doyle,1,0.7197,1,2025
+eV5DB6nQKn,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Choupo-Moting,Doyle,17,13.8891,3,2025
+KPqj7K72Q6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Cedric Teuchert,Doyle,3,3.7635,1,2025
+kRQabvYbMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Walker Zimmerman,Doyle,0,2.3735,1,2025
+315VPR6vQ9,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mKAqBBmqbg.png,Petar Musa,Gass,18,14.668,6,2025
+KAqBNdyZqb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQand1MKZ.png,Kelvin Yaboah,Gass,9,12.8853,0,2025
+p6qbOeRXQ0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,Jordan Morris,Gass,5,4.8725000000000005,1,2025
+wvq9go6aMW,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mvzqoLZQap.png,Diego Rossi,Gass,16,12.4202,3,2025
+Oa5wY8RXQ1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Hany Mukhtar,Gass,16,16.9119,8,2025
+KAqBNEpWqb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/19vQ2095K6.png,Leo Campana,Gass,7,8.1432,0,2025
+4wM46RpqjB,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Emil Forsberg,Gass,11,9.532399999999999,7,2025
+gjMN614vMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ8EW5GR.png,Ramiro Enrique,Gass,8,7.3135,0,2025
+a35ry7P2ML,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Joao Klauss,Gass,10,12.0102,2,2025
+EGMPlOjkMa,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/WBLMvYAQxe.png,Felipe Mora,Gass,5,8.7342,2,2025
+gjMNvrO4MK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mvzqoLZQap.png,Steven Moreira,Gass,1,1.1567,2,2025
+gjMNrbKMKp,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/EKXMeX3Q64.png,Christian Benteke,Tom/Calen,9,14.3207,3,2025
+kRQa2AvjMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,Evander,Tom/Calen,18,8.4368,13,2025
+raMyAywlMd,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/KAqBN0Vqbg.png,Miguel Almiron,Tom/Calen,6,10.3812,4,2025
+ljqE2VkOQx,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mKAqBBmqbg.png,Lucho Acosta,Tom/Calen,5,5.3308,1,2025
+9z5k7rej5A,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/gpMOLwl5zy.png,Brandon Vazquez,Tom/Calen,5,9.8684,0,2025
+KAqBxEWMbg,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NPqxKXZ59d.png,Wilfred Zaha,Tom/Calen,10,8.1682,5,2025
+gOMnRE8BMw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Marcel Hartel,Tom/Calen,9,7.7701,4,2025
+aDQ0PJpPQE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Tai Baribo,Tom/Calen,16,13.899000000000001,2,2025
+xW5pxANJ5g,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZBOzQKw.png,Marcus Ingvartsen,Tom/Calen,2,2.0633,1,2025
+gOMn6oPAMw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQabn8MKZ.png,Federico Bernardeschi,Tom/Calen,4,4.4616,3,2025
+jYQJzWGyQG,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,Miles Robinson,Tom/Calen,1,1.7322000000000002,0,2025
+vzqo7zWLqa,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/X0Oq66zq6D.png,Hugo Cuypers,Producer Anders,17,22.0906,2,2025
+raMyAWZAMd,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,Kevin Denkey,Producer Anders,15,13.803,1,2025
+Xj5Y8R7AMb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/0KPqjA456v.png,Chicho Arango,Producer Anders,13,15.9574,3,2025
+eVq3v9n5WO,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,Olivier Giroud,Producer Anders,3,4.5082,1,2025
+eVq3jolG5W,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/WBLMvYAQxe.png,Jonathan Rodriguez,Producer Anders,0,0.0,0,2025
+NWMWlWle5l,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,Brian White,Producer Anders,16,15.4885,1,2025
+OlMleWzR5L,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/pzeQZ6xQKw.png,Rafa Navarro,Producer Anders,12,16.8107,3,2025
+p6qbOn3DQ0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/X0Oq66zq6D.png,Jonathan Bamba,Producer Anders,5,6.3782,3,2025
+XVqKG1XWq0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Simon Becher,Producer Anders,3,8.7212,1,2025
+2vQ1N6yLMr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/APk5LGOMOW.png,Giacomo Vrioni,Producer Anders,3,4.0497,0,2025
+4wM4JGblqj,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Sean Nealis,Producer Anders,0,0.47090000000000004,0,2025
+7vQ7J8JYqD,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,Joseph Paintsil,Admin,10,10.1539,2,2025
+e7Mz9GBOQr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Mikael Uhre,Admin,6,5.7278,6,2025
+BLMv1GlQxe,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,Albert Rusnak,Admin,11,8.6453,7,2025
+2lqRR4Rxqr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Lewis Morgan,Admin,0,0.5202,0,2025
+7VqG0ZGYQv,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqR4JMr0.png,Diego Luna,Admin,9,7.7109000000000005,3,2025
+gOMnl3y6qw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQand1MKZ.png,Sang Bin Jeong,Admin,1,2.1933,1,2025
+vzqorrRk5a,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/19vQ2095K6.png,Carlos Gil,Admin,10,7.5532,9,2025
+N6Mm76gZqE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/0KPqjA456v.png,Josef Martinez,Admin,14,13.6134,2,2025
+jYQJaDnDqG,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Leo Afonso,Admin,0,0.36250000000000004,0,2025
+,,Antoine Griezmann,Admin,0,0.0,0,2025
+eV5DL18a5K,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Jakob Glesnes,Admin,1,0.8948,0,2025
+odMX84koMY,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,Son Heung-Min,Wiebe,0,0,0,2026
+vzqo7zWLqa,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/X0Oq66zq6D.png,Hugo Cuypers,Wiebe,0,0,0,2026
+kRQa2AvjMK,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,Evander,Wiebe,0,0,0,2026
+Oa5wV17gM1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ8EW5GR.png,Martín Ojeda,Wiebe,0,0,0,2026
+eV5DB6nQKn,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Eric Maxim Choupo-Moting,Wiebe,0,0,0,2026
+7vQ7J8JYqD,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,Joseph Paintsil,Wiebe,0,0,0,2026
+,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqR4JMr0.png,Morgan Guilavogui,Wiebe,0,0,0,2026
+XVqKeEmBM0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/gpMOLwl5zy.png,Facundo Torres,Wiebe,0,0,0,2026
+p6qbOeRXQ0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,Jordan Morris,Wiebe,0,0,0,2026
+KAqBNdyZqb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQand1MKZ.png,Kelvin Yaboah,Wiebe,0,0,0,2026
+2lqR7wZaQr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mvzqoLZQap.png,Max Arfsten,Wiebe,0,0,0,2026
+KPqj71NyQ6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Sam Surridge,Doyle,0,0,0,2026
+315VPR6vQ9,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mKAqBBmqbg.png,Petar Musa,Doyle,0,0,0,2026
+4JMAnx65Kg,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,Thomas Müller,Doyle,0,0,0,2026
+aDQ0PJpPQE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/EKXMeX3Q64.png,Tai Baribo,Doyle,0,0,0,2026
+BLMvzyGjMx,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/KAqBN0Vqbg.png,Emmannuel Latte Lath,Doyle,0,0,0,2026
+wvq9Xdlw5W,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Tadeo Allende,Doyle,0,0,0,2026
+KPqj7jxPQ6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mvzqoLZQap.png,Wessam Abou Ali,Doyle,0,0,0,2026
+jYQJ14KyqG,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/X0Oq66zq6D.png,Philip Zinckernagel,Doyle,0,0,0,2026
+OlMleWzR5L,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/pzeQZ6xQKw.png,Rafa Navarro,Doyle,0,0,0,2026
+a35ry7P2ML,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,João Klauss,Doyle,0,0,0,2026
+vzqo7EpLqa,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQand1MKZ.png,Anthony Markanich,Doyle,0,0,0,2026
+vzqowm7qap,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Lionel Messi,Gass,0,0,0,2026
+Xj5Y6KKaqb,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZBOzQKw.png,Anders Dreyer,Gass,0,0,0,2026
+Oa5wY8RXQ1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Hany Mukhtar,Gass,0,0,0,2026
+wvq9go6aMW,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/mvzqoLZQap.png,Diego Rossi,Gass,0,0,0,2026
+9vQ248BL5K,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NPqxKXZ59d.png,Idan Toklomati,Gass,0,0,0,2026
+kRQaovVo5K,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kaDQ0wRqEv.png,Gabriel Pec,Gass,0,0,0,2026
+EGMP1vxy5a,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/WBLMvYAQxe.png,Kristoffer Velde,Gass,0,0,0,2026
+4wM46RpqjB,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,Emil Forsberg,Gass,0,0,0,2026
+315V7Z2Vq9,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/19vQ2095K6.png,Dor Turgeman,Gass,0,0,0,2026
+9Yqdwlrj5v,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ8EW5GR.png,Marco Pašalić,Gass,0,0,0,2026
+aDQ0LoylQE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/YgOMngl5wN.png,Griffin Dorsey,Gass,0,0,0,2026
+odMXRxV2qY,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,Denis Bouanga,Tom/Calen/Witty,0,0,0,2026
+,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Germán Berterame,Tom/Calen/Witty,0,0,0,2026
+raMyAWZAMd,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,Kévin Denkey,Tom/Calen/Witty,0,0,0,2026
+NWMWlWle5l,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,Brian White,Tom/Calen/Witty,0,0,0,2026
+,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/0KPqjA456v.png,Timo Werner,Tom/Calen/Witty,0,0,0,2026
+KXMekX42q6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/Z2vQ1xlqrA.png,Dejan Joveljić,Tom/Calen/Witty,0,0,0,2026
+ljqEJonzQx,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Bruno Damiani,Tom/Calen/Witty,0,0,0,2026
+jYQJznrBQG,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/APk5LGOMOW.png,Prince Owusu,Tom/Calen/Witty,0,0,0,2026
+aDQ0PZY3QE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NPqxKXZ59d.png,Pep Biel,Tom/Calen/Witty,0,0,0,2026
+,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQabn8MKZ.png,Josh Sargent/DP #9,Tom/Calen/Witty,0,0,0,2026
+NWMWL3nL5l,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,Mathías Laborda,Tom/Calen/Witty,0,0,0,2026
+,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQand1MKZ.png,James Rodríguez,Admin,0,0,0,2026
+zeQZKbYMKw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,Luis Suárez,Admin,0,0,0,2026
+BLMv1GlQxe,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,Albert Rusnák,Admin,0,0,0,2026
+7VqG0ZGYQv,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqR4JMr0.png,Diego Luna,Admin,0,0,0,2026
+vzqorrRk5a,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/19vQ2095K6.png,Carles Gil,Admin,0,0,0,2026
+Oa5wVYvWM1,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/YgOMngl5wN.png,Ezequiel Ponce,Admin,0,0,0,2026
+vzqo7o4kqa,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,Milan Iloski,Admin,0,0,0,2026
+2lqRked4Qr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,Eduard Löwen,Admin,0,0,0,2026
+aDQ0PnvBQE,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/kRQabn8MKZ.png,Djordje Mihalovic,Admin,0,0,0,2026
+2lqRkZXDQr,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,Cristian Espinoza,Admin,0,0,0,2026
+wvq9gPmNMW,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/X0Oq66zq6D.png,Jack Elliot,Admin,0,0,0,2026

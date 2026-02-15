@@ -1,3 +1,4 @@
+from datetime import datetime
 from pathlib import Path
 
 import polars as pl
@@ -7,7 +8,10 @@ from great_tables import GT
 p: Path = Path(__file__)
 parent: Path = p.parent
 
-df: pl.DataFrame = pl.read_csv(f"{parent}/standings.csv")
+current_year: int = datetime.now().year
+df: pl.DataFrame = pl.read_csv(f"{parent}/standings.csv").filter(
+    pl.col("year") == current_year
+)
 dfs: list[pl.DataFrame] = df.partition_by("team")
 
 goals: str = "goals"
@@ -41,12 +45,7 @@ scoops_goals = scoops.select(pl.sum(goals))
 scoops_xgoals = scoops.select(pl.sum(xgoals))[xgoals].round(2)
 scoops_assists = scoops.select(pl.sum(assists))
 
-anders = dfs[4].drop(columns_to_drop).sort(sort_by_columns, descending=True)
-anders_goals = anders.select(pl.sum(goals))
-anders_xgoals = anders.select(pl.sum(xgoals))[xgoals].round(2)
-anders_assists = anders.select(pl.sum(assists))
-
-admin = dfs[5].drop(columns_to_drop).sort(sort_by_columns, descending=True)
+admin = dfs[4].drop(columns_to_drop).sort(sort_by_columns, descending=True)
 admin_goals = admin.select(pl.sum(goals))
 admin_xgoals = admin.select(pl.sum(xgoals))[xgoals].round(2)
 admin_assists = admin.select(pl.sum(assists))
@@ -60,9 +59,15 @@ def build_standings_df(dfs: list[pl.DataFrame]) -> pl.DataFrame:
     for df in dfs:
         participant_name = df["team"][0]
         participants.append(participant_name)
-        participant_goals = df.select(pl.sum("goals"))["goals"][0]
-        participant_xgoals = df.select(pl.sum("xgoals"))["xgoals"][0]
-        participant_assists = df.select(pl.sum("assists"))["assists"][0]
+        participant_goals = df.filter(pl.col("year") == current_year).select(
+            pl.sum("goals")
+        )["goals"][0]
+        participant_xgoals = df.filter(pl.col("year") == current_year).select(
+            pl.sum("xgoals")
+        )["xgoals"][0]
+        participant_assists = df.filter(pl.col("year") == current_year).select(
+            pl.sum("assists")
+        )["assists"][0]
         goals.append(participant_goals)
         xgoals.append(participant_xgoals)
         assists.append(participant_assists)
@@ -73,7 +78,7 @@ def build_standings_df(dfs: list[pl.DataFrame]) -> pl.DataFrame:
 
 def create_team_gt(df: pl.DataFrame) -> str:
     return (
-        GT(df)
+        GT(df.drop("year"))
         .fmt_number(columns=xgoals, decimals=2)
         .fmt_image("club_logo")
         .cols_label(
@@ -99,12 +104,12 @@ standings_html = (
     .as_raw_html()
 )
 
-st.title(body="2025 Golden Boot 👟", text_alignment="center")
+st.title(body=f"{current_year} Golden Boot 👟", text_alignment="center")
 
 st.html(standings_html)
 
 col1, col2, col3 = st.columns(3)
-col4, col5, col6 = st.columns([4, 5, 6])
+col4, col5 = st.columns([4, 5])
 
 with st.container():
     with col1:
@@ -139,7 +144,7 @@ with st.container():
 
 with st.container():
     with col4:
-        st.header("Team Tom/Calen")
+        st.header("Team Tom/Calen/Witty")
         with st.container():
             metric1, metric2 = st.columns(2)
             with metric1:
@@ -149,16 +154,6 @@ with st.container():
         st.html(create_team_gt(scoops))
 
     with col5:
-        st.header("Producer Anders")
-        with st.container():
-            metric1, metric2 = st.columns(2)
-            with metric1:
-                st.metric(label=goals_label, value=anders_goals)
-            with metric2:
-                st.metric(label=xgoals_label, value=anders_xgoals)
-        st.html(create_team_gt(anders))
-
-    with col6:
         st.header("Team Admin")
         with st.container():
             metric1, metric2 = st.columns(2)
@@ -169,7 +164,7 @@ with st.container():
         st.html(create_team_gt(admin))
 
 st.caption(
-    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Monday October 20, 2025 at 08:02:48 AM UTC."
+    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Saturday February 21, 2026 at 00:00:00 AM UTC."
 )
 st.caption(
     "The wordmarks, logos, trade names, packaging and designs of MLS, SUM, the current and former MLS member clubs are the exclusive property of MLS or their affiliates."

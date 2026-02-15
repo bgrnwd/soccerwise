@@ -8,6 +8,7 @@ from itscalledsoccer.client import AmericanSoccerAnalysis
 p: Path = Path(__file__)
 root: Path = p.parent.parent.parent
 client: AmericanSoccerAnalysis = AmericanSoccerAnalysis(lazy_load=False)
+current_year: int = datetime.now().year
 
 
 def update_timestamp(file: str) -> None:
@@ -28,13 +29,18 @@ def update_golden_boot():
     """Updates the standings.csv file with the latest goals, xgoals, and assists for each player."""
     standings_csv_file: str = f"{root}/src/standings.csv"
     standings_py_file: str = f"{root}/src/standings.py"
-    standings_df: pl.DataFrame = pl.read_csv(standings_csv_file)
+    standings_df: pl.DataFrame = pl.read_csv(standings_csv_file).filter(
+        pl.col("year") == current_year
+    )
     players: pl.Series = standings_df["player_id"]
 
     for index, player in enumerate(players.to_list()):
         if player:
             xgoal: pl.DataFrame = client.get_player_xgoals(
-                player_ids=player, leagues="mls", season_name="2026", stage_name="Regular Season"
+                player_ids=player,
+                leagues="mls",
+                season_name=f"{current_year}",
+                stage_name="Regular Season",
             )
             standings_df[index, "goals"] = xgoal.get("goals", 0)
             standings_df[index, "xgoals"] = xgoal.get("xgoals", 0)
@@ -55,7 +61,10 @@ def update_over_under():
     for index, team in enumerate(teams.to_list()):
         if team:
             games: pl.DataFrame = client.get_games(
-                team_ids=team, leagues="mls", season_name="2026", stage_name="Regular Season"
+                team_ids=team,
+                leagues="mls",
+                season_name=f"{current_year}",
+                stage_name="Regular Season",
             )
             points: int = 0
             for game in games:
