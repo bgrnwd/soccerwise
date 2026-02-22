@@ -29,6 +29,7 @@ def update_golden_boot():
     """Updates the standings.csv file with the latest goals, xgoals, and assists for each player."""
     standings_csv_file: str = f"{root}/src/standings.csv"
     standings_py_file: str = f"{root}/src/standings.py"
+    csv_df: pl.DataFrame = pl.read_csv(standings_csv_file)
     standings_df: pl.DataFrame = pl.read_csv(standings_csv_file).filter(
         pl.col("year") == current_year
     )
@@ -46,7 +47,8 @@ def update_golden_boot():
             standings_df[index, "xgoals"] = xgoal.get("xgoals", 0)
             standings_df[index, "assists"] = xgoal.get("primary_assists", 0)
 
-    standings_df.write_csv(standings_csv_file)
+    csv_df.update(standings_df)
+    csv_df.write_csv(standings_csv_file)
 
     update_timestamp(standings_py_file)
 
