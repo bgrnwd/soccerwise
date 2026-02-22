@@ -1,9 +1,9 @@
 name: ⚽ Update Data
 on:
   schedule:
-    - cron: 0 8 * MAR-OCT MON
-    - cron: 0 8 * MAR-OCT WED
-    - cron: 0 8 * MAR-OCT SUN
+    - cron: 0 8 * FEB-OCT MON
+    - cron: 0 8 * FEB-OCT THU
+    - cron: 0 8 * FEB-OCT SUN
   workflow_dispatch: ~
 permissions:
   contents: write
