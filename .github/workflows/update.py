@@ -66,7 +66,7 @@ def update_over_under():
                 team_ids=team,
                 leagues="mls",
                 seasons=f"{current_year}",
-                stage_name="Regular Season",
+                stages="Regular Season",
             )
             points: int = 0
             for game in games:
