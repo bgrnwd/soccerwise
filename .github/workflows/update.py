@@ -40,7 +40,7 @@ def update_golden_boot():
             xgoal: pl.DataFrame = client.get_player_xgoals(
                 player_ids=player,
                 leagues="mls",
-                seasons=f"{current_year}",
+                season_name=f"{current_year}",
                 stage_name="Regular Season",
             )
             standings_df[index, "goals"] = xgoal.get("goals", 0)
