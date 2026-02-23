@@ -47,7 +47,7 @@ def update_golden_boot():
             standings_df[index, "xgoals"] = xgoal.get("xgoals", 0)
             standings_df[index, "assists"] = xgoal.get("primary_assists", 0)
 
-    csv_df.update(standings_df)
+    csv_df = csv_df.update(standings_df, left_on=["player_id", "year"], right_on=["player_id", "year"])
     csv_df.write_csv(standings_csv_file)
 
     update_timestamp(standings_py_file)
