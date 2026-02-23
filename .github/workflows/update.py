@@ -60,33 +60,55 @@ def update_over_under():
     over_under_df: pl.DataFrame = pl.read_csv(over_under_csv_file)
     teams: pl.Series = over_under_df["team_id"]
 
-    for index, team in enumerate(teams.to_list()):
+    points_list: list[int] = []
+
+    for _, team in enumerate(teams.to_list()):
         if team:
-            games: pl.DataFrame = client.get_games(
-                team_ids=team,
-                leagues="mls",
-                seasons=f"{current_year}",
-                stages="Regular Season",
-            )
-            points: int = 0
-            for game in games:
-                if game.get("home_team_id") == team:
-                    points += (
-                        3
-                        if game.get("home_score", 0) > game.get("away_score", 0)
-                        else 1
-                        if game.get("home_score", 0) == game.get("away_score", 0)
-                        else 0
+            try:
+                games_pandas = client.get_games(
+                    team_ids=team,
+                    leagues="mls",
+                    seasons=f"{current_year}",
+                    stages="Regular Season",
+                )
+                # Convert pandas DataFrame to Polars
+                games: pl.DataFrame = pl.from_pandas(games_pandas)
+
+                # Filter games where the team is either home or away
+                team_games = games.filter(
+                    (pl.col("home_team_id") == team) | (pl.col("away_team_id") == team)
+                )
+
+                # Calculate points for each game
+                points_expr = (
+                    pl.when(pl.col("home_team_id") == team)
+                    .then(
+                        pl.when(pl.col("home_score") > pl.col("away_score"))
+                        .then(3)
+                        .when(pl.col("home_score") == pl.col("away_score"))
+                        .then(1)
+                        .otherwise(0)
                     )
-                elif game.get("away_team_id") == team:
-                    points += (
-                        3
-                        if game.get("away_score", 0) > game.get("home_score", 0)
-                        else 1
-                        if game.get("away_score", 0) == game.get("home_score", 0)
-                        else 0
+                    .otherwise(
+                        pl.when(pl.col("away_score") > pl.col("home_score"))
+                        .then(3)
+                        .when(pl.col("away_score") == pl.col("home_score"))
+                        .then(1)
+                        .otherwise(0)
                     )
-            over_under_df[index, "points"] = points
+                )
+
+                # Calculate total points
+                total_points = team_games.select(points_expr.sum()).item()
+                points_list.append(total_points)
+            except KeyError as e:
+                print(f"Error processing team {team}: {e}")
+                points_list.append(0)
+        else:
+            points_list.append(0)
+
+    # Add points column to dataframe
+    over_under_df = over_under_df.with_columns(pl.Series("points", points_list))
     over_under_df.write_csv(over_under_csv_file)
 
     update_timestamp(over_under_py_file)

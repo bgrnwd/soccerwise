@@ -1,6 +1,6 @@
 [project]
-name = "goldenbootdraft.tracker"
-description = "Tracking the annual Soccerwise Golden Boot competition"
+name = "soccerwise"
+description = "Tracking the annual Soccerwise Golden Boot competition and Over/Under predictions"
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
@@ -24,15 +24,16 @@ dependencies = [
   "polars",
   "great_tables"
 ]
-version = "0.1.0"
+version = "0.1.1"
 
 [project.urls]
-Repository = "https://github.com/bgrnwd/goldenbootdraft.tracker"
+Repository = "https://github.com/bgrnwd/soccerwise"
 
 [dependency-groups]
 dev = [
   "pytest",
-  "ruff"
+  "ruff",
+  "ty"
 ]
 
 [build-system]
