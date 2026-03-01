@@ -40,7 +40,7 @@ st.html(
 )
 
 st.caption(
-    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Monday February 23, 2026 at 08:10:05 AM UTC."
+    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Sunday March 01, 2026 at 08:12:06 AM UTC."
 )
 st.caption(
     "The wordmarks, logos, trade names, packaging and designs of MLS, SUM, the current and former MLS member clubs are the exclusive property of MLS or their affiliates."
