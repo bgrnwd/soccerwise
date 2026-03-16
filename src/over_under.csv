@@ -1,9 +1,9 @@
 team_name,team_id,team_logo,over_under,doyle,tom,gass,points,year
 Inter Miami,zeQZkL1MKw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZkL1MKw.png,67.5,Over,Over,Over,7,2026
 LAFC,eVq3ya6MWO,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/eVq3ya6MWO.png,62.5,Over,Over,Over,12,2026
-Vancouver,lgpMOvnQzy,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,61.5,Under,Under (Lock),Under,9,2026
+Vancouver,lgpMOvnQzy,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/lgpMOvnQzy.png,61.5,Under,Under (Lock),Under,12,2026
 Nashville,vzqoOgNqap,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/vzqoOgNqap.png,60.5,Over,Over,Under,10,2026
-Seattle,jYQJ19EqGR,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,58.5,Over (Lock),Under,Over,6,2026
+Seattle,jYQJ19EqGR,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/jYQJ19EqGR.png,58.5,Over (Lock),Under,Over,9,2026
 Philadelphia,9z5k7Yg5A3,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/9z5k7Yg5A3.png,58.5,Under,Under,Under,0,2026
 Cincinnati,NWMWlBK5lz,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/NWMWlBK5lz.png,57.5,Under,Over,Over,3,2026
 San Diego,zeQZBOzQKw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/zeQZBOzQKw.png,56.5,Under (Lock),Under,Under,10,2026
@@ -22,7 +22,7 @@ Houston,YgOMngl5wN,https://american-soccer-analysis-headshots.s3.amazonaws.com/c
 Colorado,pzeQZ6xQKw,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/pzeQZ6xQKw.png,43.5,Over,Over,Over,6,2026
 Atlanta,KAqBN0Vqbg,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/KAqBN0Vqbg.png,43.5,Under,Over,Over,3,2026`
 St. Louis,wvq9B9wQWn,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/wvq9B9wQWn.png,42.5,Over,Under,Under,1,2026
-New England,19vQ2095K6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/19vQ2095K6.png,42.5,Over (Lock),Under,Over,0,2026
+New England,19vQ2095K6,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/19vQ2095K6.png,42.5,Over (Lock),Under,Over,3,2026
 Portland,WBLMvYAQxe,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/WBLMvYAQxe.png,41.5,Under,Over,Over,3,2026
 RBNY,a2lqRX2Mr0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqRX2Mr0.png,40.5,Under,Over (Lock),Under,7,2026
 Real Salt Lake,a2lqR4JMr0,https://american-soccer-analysis-headshots.s3.amazonaws.com/club_logos/a2lqR4JMr0.png,39.5,Under,Under,Under,9,2026
