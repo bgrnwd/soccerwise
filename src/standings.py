@@ -164,7 +164,7 @@ with st.container():
         st.html(create_team_gt(admin))
 
 st.caption(
-    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Sunday April 26, 2026 at 08:32:57 AM UTC."
+    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Monday April 27, 2026 at 08:46:04 AM UTC."
 )
 st.caption(
     "The wordmarks, logos, trade names, packaging and designs of MLS, SUM, the current and former MLS member clubs are the exclusive property of MLS or their affiliates."
