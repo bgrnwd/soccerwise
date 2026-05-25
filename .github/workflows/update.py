@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 import polars as pl
-from itscalledsoccer.client import AmericanSoccerAnalysis
+from itscalledsoccer import AmericanSoccerAnalysis
 
 p: Path = Path(__file__)
 root: Path = p.parent.parent.parent
@@ -68,7 +68,7 @@ def update_over_under():
                 games_pandas = client.get_games(
                     team_ids=team,
                     leagues="mls",
-                    seasons=f"{current_year}",
+                    season_name=f"{current_year}",
                     stages="Regular Season",
                 )
                 # Convert pandas DataFrame to Polars

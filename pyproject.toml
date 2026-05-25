@@ -20,7 +20,7 @@ classifiers = [
 ]
 dependencies = [
   "streamlit>=1.57.0",
-  "itscalledsoccer",
+  "itscalledsoccer==2.1.0",
   "polars",
   "great_tables"
 ]
