@@ -19,7 +19,7 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-  "streamlit>=1.57.0",
+  "streamlit>=1.58.0",
   "itscalledsoccer==2.1.0",
   "polars",
   "great_tables"
