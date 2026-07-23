@@ -29,8 +29,8 @@ def update_golden_boot():
     """Updates the standings.csv file with the latest goals, xgoals, and assists for each player."""
     standings_csv_file: str = f"{root}/src/standings.csv"
     standings_py_file: str = f"{root}/src/standings.py"
-    csv_df: pl.DataFrame = pl.read_csv(standings_csv_file)
-    standings_df: pl.DataFrame = pl.read_csv(standings_csv_file).filter(
+    csv_df: pl.DataFrame = pl.read_csv(standings_csv_file, read_csv_options={"truncate_ragged_lines": True})
+    standings_df: pl.DataFrame = pl.read_csv(standings_csv_file, read_csv_options={"truncate_ragged_lines": True}).filter(
         pl.col("year") == current_year
     )
     players: pl.Series = standings_df["player_id"]
@@ -57,7 +57,7 @@ def update_over_under():
     """Updates the over_under.csv file with the latest points for each team."""
     over_under_csv_file: str = f"{root}/src/over_under.csv"
     over_under_py_file: str = f"{root}/src/over_under.py"
-    over_under_df: pl.DataFrame = pl.read_csv(over_under_csv_file)
+    over_under_df: pl.DataFrame = pl.read_csv(over_under_csv_file, read_csv_options={"truncate_ragged_lines": True})
     teams: pl.Series = over_under_df["team_id"]
 
     points_list: list[int] = []
