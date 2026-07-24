@@ -23,57 +23,39 @@ assists_label: str = assists.capitalize()
 columns_to_drop: list[str] = ["player_id", "team"]
 sort_by_columns: list[str] = [goals, xgoals]
 
-wiebe: pl.DataFrame = (
-    dfs[0].drop(columns_to_drop).sort(sort_by_columns, descending=True)
-)
-wiebe_goals: pl.DataFrame = wiebe.select(pl.sum(goals))
-wiebe_xgoals: float = wiebe.select(pl.sum(xgoals))[xgoals].round(2)
-wiebe_assists: pl.DataFrame = wiebe.select(pl.sum(assists))
 
-doyle = dfs[1].drop(columns_to_drop).sort(sort_by_columns, descending=True)
-doyle_goals = doyle.select(pl.sum(goals))
-doyle_xgoals = doyle.select(pl.sum(xgoals))[xgoals].round(2)
-doyle_assists = doyle.select(pl.sum(assists))
-
-gass = dfs[2].drop(columns_to_drop).sort(sort_by_columns, descending=True)
-gass_goals = gass.select(pl.sum(goals))
-gass_xgoals = gass.select(pl.sum(xgoals))[xgoals].round(2)
-gass_assists = gass.select(pl.sum(assists))
-
-scoops = dfs[3].drop(columns_to_drop).sort(sort_by_columns, descending=True)
-scoops_goals = scoops.select(pl.sum(goals))
-scoops_xgoals = scoops.select(pl.sum(xgoals))[xgoals].round(2)
-scoops_assists = scoops.select(pl.sum(assists))
-
-admin = dfs[4].drop(columns_to_drop).sort(sort_by_columns, descending=True)
-admin_goals = admin.select(pl.sum(goals))
-admin_xgoals = admin.select(pl.sum(xgoals))[xgoals].round(2)
-admin_assists = admin.select(pl.sum(assists))
-
-
-def build_standings_df(dfs: list[pl.DataFrame]) -> pl.DataFrame:
-    participants = []
-    goals = []
-    xgoals = []
-    assists = []
-    for df in dfs:
-        participant_name = df["team"][0]
-        participants.append(participant_name)
-        participant_goals = df.filter(pl.col("year") == current_year).select(
-            pl.sum("goals")
-        )["goals"][0]
-        participant_xgoals = df.filter(pl.col("year") == current_year).select(
-            pl.sum("xgoals")
-        )["xgoals"][0]
-        participant_assists = df.filter(pl.col("year") == current_year).select(
-            pl.sum("assists")
-        )["assists"][0]
-        goals.append(participant_goals)
-        xgoals.append(participant_xgoals)
-        assists.append(participant_assists)
-    return pl.DataFrame(
-        {"team": participants, "goals": goals, "xG": xgoals, "assists": assists}
+def cast_stats(df: pl.DataFrame) -> pl.DataFrame:
+    return df.with_columns(
+        [
+            pl.col(goals).cast(pl.Int32),
+            pl.col(xgoals).cast(pl.Float64),
+            pl.col(assists).cast(pl.Int32),
+        ]
     )
+
+
+def summarize_team(df: pl.DataFrame) -> dict[str, object]:
+    return {
+        "goals": int(df[goals].sum()),
+        "xG": float(df[xgoals].sum()),
+        "assists": int(df[assists].sum()),
+    }
+
+
+def prepare_team_data(dfs: list[pl.DataFrame]) -> tuple[dict[str, pl.DataFrame], list[str]]:
+    team_map = {df["team"][0]: df for df in dfs}
+    return {
+        team: cast_stats(team_df.drop(columns_to_drop)).sort(sort_by_columns, descending=True)
+        for team, team_df in team_map.items()
+    }, list(team_map)
+
+
+def build_standings_df(team_dfs: dict[str, pl.DataFrame]) -> pl.DataFrame:
+    rows = [
+        {"team": team, **summarize_team(team_df)}
+        for team, team_df in team_dfs.items()
+    ]
+    return pl.DataFrame(rows).sort([goals, xgoals_label], descending=[True, True])
 
 
 def create_team_gt(df: pl.DataFrame) -> str:
@@ -95,7 +77,9 @@ def create_team_gt(df: pl.DataFrame) -> str:
     )
 
 
-standings = build_standings_df(dfs).sort([goals, xgoals_label], descending=True)
+team_dfs, _ = prepare_team_data(dfs)
+standings = build_standings_df(team_dfs)
+team_order = standings["team"].to_list()
 standings_html = (
     GT(standings)
     .fmt_number(columns=xgoals_label, decimals=2)
@@ -108,60 +92,24 @@ st.title(body=f"{current_year} Golden Boot 👟", text_alignment="center")
 
 st.html(standings_html)
 
-col1, col2, col3 = st.columns(3)
-col4, col5 = st.columns([4, 5])
+team_metrics = {team: summarize_team(df) for team, df in team_dfs.items()}
 
-with st.container():
-    with col1:
-        st.header("Team Wiebe")
-        with st.container():
-            metric1, metric2 = st.columns(2)
-            with metric1:
-                st.metric(label=goals_label, value=wiebe_goals)
-            with metric2:
-                st.metric(label=xgoals_label, value=wiebe_xgoals)
-        st.html(create_team_gt(wiebe))
 
-    with col2:
-        st.header("Team Doyle")
-        with st.container():
-            metric1, metric2 = st.columns(2)
-            with metric1:
-                st.metric(label=goals_label, value=doyle_goals)
-            with metric2:
-                st.metric(label=xgoals_label, value=doyle_xgoals)
-        st.html(create_team_gt(doyle))
+def render_team_card(team: str, df: pl.DataFrame, metrics: dict[str, object]) -> None:
+    st.subheader(team)
+    metric1, metric2 = st.columns(2)
+    metric1.metric(label=goals_label, value=metrics[goals])
+    metric2.metric(label=xgoals_label, value=round(metrics["xG"], 2))
+    st.html(create_team_gt(df))
 
-    with col3:
-        st.header("Team Gass")
-        with st.container():
-            metric1, metric2 = st.columns(2)
-            with metric1:
-                st.metric(label=goals_label, value=gass_goals)
-            with metric2:
-                st.metric(label=xgoals_label, value=gass_xgoals)
-        st.html(create_team_gt(gass))
 
-with st.container():
-    with col4:
-        st.header("Team Tom/Calen/Witty")
-        with st.container():
-            metric1, metric2 = st.columns(2)
-            with metric1:
-                st.metric(label=goals_label, value=scoops_goals)
-            with metric2:
-                st.metric(label=xgoals_label, value=scoops_xgoals)
-        st.html(create_team_gt(scoops))
-
-    with col5:
-        st.header("Team Admin")
-        with st.container():
-            metric1, metric2 = st.columns(2)
-            with metric1:
-                st.metric(label=goals_label, value=admin_goals)
-            with metric2:
-                st.metric(label=xgoals_label, value=admin_xgoals)
-        st.html(create_team_gt(admin))
+cards_per_row = 3
+for i in range(0, len(team_order), cards_per_row):
+    row_teams = team_order[i : i + cards_per_row]
+    cols = st.columns(len(row_teams))
+    for col, team in zip(cols, row_teams):
+        with col:
+            render_team_card(team, team_dfs[team], team_metrics[team])
 
 st.caption(
     "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Thursday July 23, 2026 at 09:17:11 AM UTC."
