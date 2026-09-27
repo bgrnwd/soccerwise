@@ -21,7 +21,7 @@ LABELS = {
     "points": "Points",
 }
 CAPTIONS = [
-    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Thursday September 24, 2026 at 01:03:57 PM UTC.",
+    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Sunday September 27, 2026 at 01:39:58 PM UTC.",
     "The wordmarks, logos, trade names, packaging and designs of MLS, SUM, the current and former MLS member clubs are the exclusive property of MLS or their affiliates.",
     "Data courtesy of [American Soccer Analysis](https://www.americansocceranalysis.com/).",
 ]
