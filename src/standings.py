@@ -112,7 +112,7 @@ for i in range(0, len(team_order), cards_per_row):
             render_team_card(team, team_dfs[team], team_metrics[team])
 
 st.caption(
-    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Sunday September 27, 2026 at 01:39:46 PM UTC."
+    "Data is updated every Sunday, Monday, and Thursday morning. Last updated on Monday September 28, 2026 at 04:08:30 PM UTC."
 )
 st.caption(
     "The wordmarks, logos, trade names, packaging and designs of MLS, SUM, the current and former MLS member clubs are the exclusive property of MLS or their affiliates."
