@@ -20,6 +20,9 @@ xgoals: str = "xgoals"
 xgoals_label: str = "xG"
 assists: str = "assists"
 assists_label: str = assists.capitalize()
+minutes_played: str = "minutes_played"
+goals_per_90: str = "goals_per_90"
+goals_per_90_label: str = "Goals per 90"
 columns_to_drop: list[str] = ["player_id", "team"]
 sort_by_columns: list[str] = [goals, xgoals]
 
@@ -30,6 +33,7 @@ def cast_stats(df: pl.DataFrame) -> pl.DataFrame:
             pl.col(goals).cast(pl.Int32),
             pl.col(xgoals).cast(pl.Float64),
             pl.col(assists).cast(pl.Int32),
+            pl.col(minutes_played).cast(pl.Int32),
         ]
     )
 
@@ -39,28 +43,36 @@ def summarize_team(df: pl.DataFrame) -> dict[str, object]:
         "goals": int(df[goals].sum()),
         "xG": float(df[xgoals].sum()),
         "assists": int(df[assists].sum()),
+        goals_per_90: (
+            float(df[goals].sum() * 90 / df[minutes_played].sum())
+            if df[minutes_played].sum() > 0
+            else None
+        ),
     }
 
 
-def prepare_team_data(dfs: list[pl.DataFrame]) -> tuple[dict[str, pl.DataFrame], list[str]]:
+def prepare_team_data(
+    dfs: list[pl.DataFrame],
+) -> tuple[dict[str, pl.DataFrame], list[str]]:
     team_map = {df["team"][0]: df for df in dfs}
     return {
-        team: cast_stats(team_df.drop(columns_to_drop)).sort(sort_by_columns, descending=True)
+        team: cast_stats(team_df.drop(columns_to_drop)).sort(
+            sort_by_columns, descending=True
+        )
         for team, team_df in team_map.items()
     }, list(team_map)
 
 
 def build_standings_df(team_dfs: dict[str, pl.DataFrame]) -> pl.DataFrame:
     rows = [
-        {"team": team, **summarize_team(team_df)}
-        for team, team_df in team_dfs.items()
+        {"team": team, **summarize_team(team_df)} for team, team_df in team_dfs.items()
     ]
     return pl.DataFrame(rows).sort([goals, xgoals_label], descending=[True, True])
 
 
 def create_team_gt(df: pl.DataFrame) -> str:
     return (
-        GT(df.drop("year"))
+        GT(df.drop(["year", minutes_played]))
         .fmt_number(columns=xgoals, decimals=2)
         .fmt_image("club_logo")
         .cols_label(
@@ -82,9 +94,16 @@ standings = build_standings_df(team_dfs)
 team_order = standings["team"].to_list()
 standings_html = (
     GT(standings)
-    .fmt_number(columns=xgoals_label, decimals=2)
-    .cols_label({"team": "Team", "goals": goals_label, "assists": assists_label})
-    .data_color(columns=[goals, xgoals_label, assists], palette="Greens")
+    .fmt_number(columns=[xgoals_label, goals_per_90], decimals=2)
+    .cols_label(
+        {
+            "team": "Team",
+            "goals": goals_label,
+            "assists": assists_label,
+            goals_per_90: goals_per_90_label,
+        }
+    )
+    .data_color(columns=[goals, xgoals_label, assists, goals_per_90], palette="Greens")
     .as_raw_html()
 )
 

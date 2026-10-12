@@ -10,7 +10,17 @@ parent: Path = Path(__file__).parent
 df: pl.DataFrame = pl.read_csv(f"{parent}/over_under.csv")
 current_year: int = datetime.now().year
 
-TABLE_COLUMNS = ["team_logo", "team_name", "points", "over_under", "doyle", "tom", "gass"]
+TABLE_COLUMNS = [
+    "team_logo",
+    "team_name",
+    "points",
+    "over_under",
+    "doyle",
+    "tom",
+    "gass",
+]
+PREDICTION_COLUMNS = ["doyle", "tom", "gass"]
+INCORRECT_MARKER = '<span style="color: #dc2626;">✖</span>'
 LABELS = {
     "team_logo": "Club",
     "team_name": "",
@@ -28,16 +38,41 @@ CAPTIONS = [
 
 
 def build_table(df: pl.DataFrame) -> str:
+    marked_df = df.with_columns(
+        pl.concat_str(
+            [
+                pl.col(column),
+                pl.when(pl.col("points") > pl.col("over_under"))
+                .then(
+                    pl.when(pl.col(column).str.starts_with("Over"))
+                    .then(pl.lit(" ✅"))
+                    .otherwise(pl.lit(f" {INCORRECT_MARKER}"))
+                )
+                .otherwise(pl.lit("")),
+            ]
+        ).alias(column)
+        for column in PREDICTION_COLUMNS
+    )
     return (
-        GT(df.drop(["year", "team_id"]).select(TABLE_COLUMNS))
+        GT(marked_df.drop(["year", "team_id"]).select(TABLE_COLUMNS))
         .fmt_image("team_logo")
         .cols_label(LABELS)
         .data_color(columns=["over_under", "points"], palette="Greens")
         .data_color(
-            columns=["tom", "gass", "doyle"],
+            columns=PREDICTION_COLUMNS,
             palette="Oranges",
-            domain=["Over", "Under", "Over (Lock)", "Under (Lock)"],
+            domain=[
+                "Over",
+                "Under",
+                "Over (Lock)",
+                "Under (Lock)",
+                "Over ✅",
+                "Over (Lock) ✅",
+                f"Under {INCORRECT_MARKER}",
+                f"Under (Lock) {INCORRECT_MARKER}",
+            ],
         )
+        .fmt_markdown(columns=PREDICTION_COLUMNS)
         .as_raw_html()
     )
 
