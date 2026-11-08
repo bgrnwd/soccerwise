@@ -25,6 +25,16 @@ def update_timestamp(file: str) -> None:
         f.write(new_content)
 
 
+def player_stats_from_response(xgoal: pl.DataFrame) -> dict[str, int | float]:
+    stats = xgoal.row(0, named=True) if xgoal.height else {}
+    return {
+        "goals": stats.get("goals", 0) or 0,
+        "xgoals": stats.get("xgoals", 0) or 0,
+        "assists": stats.get("primary_assists", 0) or 0,
+        "minutes_played": stats.get("minutes_played", 0) or 0,
+    }
+
+
 def update_golden_boot():
     """Updates the standings.csv file with the latest player stats."""
     standings_csv_file: str = f"{root}/src/standings.csv"
@@ -43,10 +53,11 @@ def update_golden_boot():
                 season_name=f"{current_year}",
                 stage_name="Regular Season",
             )
-            standings_df[index, "goals"] = xgoal.get("goals", 0)
-            standings_df[index, "xgoals"] = xgoal.get("xgoals", 0)
-            standings_df[index, "assists"] = xgoal.get("primary_assists", 0)
-            standings_df[index, "minutes_played"] = xgoal.get("minutes_played", 0)
+            stats = player_stats_from_response(xgoal)
+            standings_df[index, "goals"] = stats["goals"]
+            standings_df[index, "xgoals"] = stats["xgoals"]
+            standings_df[index, "assists"] = stats["assists"]
+            standings_df[index, "minutes_played"] = stats["minutes_played"]
 
     csv_df = csv_df.update(standings_df, left_on=["player_id", "year"], right_on=["player_id", "year"])
     csv_df.write_csv(standings_csv_file)
