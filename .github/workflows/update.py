@@ -77,14 +77,12 @@ def update_over_under():
     for _, team in enumerate(teams.to_list()):
         if team:
             try:
-                games_pandas = client.get_games(
+                games: pl.DataFrame = client.get_games(
                     team_ids=team,
                     leagues="mls",
                     season_name=f"{current_year}",
                     stages="Regular Season",
                 )
-                # Convert pandas DataFrame to Polars
-                games: pl.DataFrame = pl.from_pandas(games_pandas)
 
                 # Filter games where the team is either home or away
                 team_games = games.filter(
