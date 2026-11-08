@@ -7,7 +7,7 @@ from itscalledsoccer import AmericanSoccerAnalysis
 
 p: Path = Path(__file__)
 root: Path = p.parent.parent.parent
-client: AmericanSoccerAnalysis = AmericanSoccerAnalysis(lazy_load=False)
+client: AmericanSoccerAnalysis = AmericanSoccerAnalysis()
 current_year: int = datetime.now().year
 
 
