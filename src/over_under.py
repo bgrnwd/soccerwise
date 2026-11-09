@@ -5,6 +5,8 @@ import polars as pl
 import streamlit as st
 from great_tables import GT, loc, style
 
+from over_under_logic import correct_prediction_counts, mark_predictions
+
 parent: Path = Path(__file__).parent
 
 df: pl.DataFrame = pl.read_csv(f"{parent}/over_under.csv")
@@ -38,58 +40,28 @@ CAPTIONS = [
 
 
 def build_table(df: pl.DataFrame) -> str:
-    marked_df = df.with_columns(
-        pl.concat_str(
-            [
-                pl.col(column),
-                pl.when(pl.col("points") > pl.col("over_under"))
-                .then(
-                    pl.when(pl.col(column).str.starts_with("Over"))
-                    .then(pl.lit(" ✅"))
-                    .otherwise(pl.lit(f" {INCORRECT_MARKER}"))
-                )
-                .otherwise(pl.lit("")),
-            ]
-        ).alias(column)
-        for column in PREDICTION_COLUMNS
-    )
+    marked_df = mark_predictions(df, PREDICTION_COLUMNS, INCORRECT_MARKER)
     table_df = marked_df.drop(["year", "team_id"]).select(TABLE_COLUMNS)
     return (
         GT(table_df)
         .fmt_image("team_logo")
         .cols_label(LABELS)
         .data_color(columns=["over_under", "points"], palette="Greens")
-        .data_color(
-            columns=PREDICTION_COLUMNS,
-            palette="Oranges",
-            domain=[
-                "Over",
-                "Under",
-                "Over (Lock)",
-                "Under (Lock)",
-                "Over ✅",
-                "Over (Lock) ✅",
-                f"Under {INCORRECT_MARKER}",
-                f"Under (Lock) {INCORRECT_MARKER}",
-            ],
-        )
         .fmt_markdown(columns=PREDICTION_COLUMNS)
         .as_raw_html()
     )
 
 
 def build_correct_predictions_table(df: pl.DataFrame) -> str:
-    decided = pl.col("points") > pl.col("over_under")
-    decided_count = df.select(decided.sum()).item()
-    correct_counts = {}
-    for column in PREDICTION_COLUMNS:
-        correct = (pl.col(column).str.starts_with("Over") & decided).fill_null(False)
-        correct_counts[column] = f"{df.select(correct.sum()).item()}/{decided_count}"
+    correct_counts = correct_prediction_counts(df, PREDICTION_COLUMNS)
+    decided_count = df.select(
+        (pl.col("points").is_not_null() & pl.col("over_under").is_not_null()).sum()
+    ).item() or 0
 
     return (
         GT(pl.DataFrame([correct_counts]))
         .tab_header(title="Correct Predictions")
-        .tab_source_note("Results aren't final until the end of the season.")
+        .tab_source_note("Regular season results are final.")
         .cols_label({"doyle": "Doyle", "tom": "Tom", "gass": "Gass"})
         .tab_style(
             style=style.text(weight="bold"),
@@ -97,7 +69,7 @@ def build_correct_predictions_table(df: pl.DataFrame) -> str:
         )
         .data_color(
             columns=PREDICTION_COLUMNS,
-            palette="Oranges",
+            palette="Greens",
             domain=sorted(
                 correct_counts.values(),
                 key=lambda count: int(count.split("/")[0]) / decided_count
